@@ -11,6 +11,8 @@ function Character() {
       .then((json) => setCharacter(json.data));
   }, [id]);
 
+  if (!character) return <p>Loading</p>;
+
   return (
     <>
       <Link to="/">Back</Link>
